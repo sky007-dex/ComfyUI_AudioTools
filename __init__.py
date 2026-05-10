@@ -4,6 +4,12 @@ from .AddSubtitlesToVideo import AddSubtitlesToTensor
 from .MWAudioRecorderAT import AudioRecorderAT
 from .clearvoicenode import ClearVoiceRun
 from .audio_separate import MusicSeparation, SpeechSeparation, MergeAudioMW
+from .audio_auto_split import (
+    AudioAutoSplitProcessor,
+    AudioSegmentExtractor,
+    AudioMergeSegments,
+    AudioBatchProcessor,
+)
 
 
 NODE_CLASS_MAPPINGS = {
@@ -15,7 +21,6 @@ NODE_CLASS_MAPPINGS = {
     "AdjustAudio": AdjustAudio,
     "TrimAudio": TrimAudio,
     "RemoveSilence": RemoveSilence,
-    # "AudioDenoising": AudioDenoising,
     "AudioRecorderAT": AudioRecorderAT,
     "AddSubtitlesToVideo": AddSubtitlesToTensor,
     "MultiLinePromptAT": MultiLinePromptAT,
@@ -23,6 +28,10 @@ NODE_CLASS_MAPPINGS = {
     "MusicSeparation": MusicSeparation,
     "SpeechSeparation": SpeechSeparation,
     "MergeAudioMW": MergeAudioMW,
+    "AudioAutoSplitProcessor": AudioAutoSplitProcessor,
+    "AudioSegmentExtractor": AudioSegmentExtractor,
+    "AudioMergeSegments": AudioMergeSegments,
+    "AudioBatchProcessor": AudioBatchProcessor,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -34,7 +43,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "AdjustAudio": "Adjust Audio",
     "TrimAudio": "Trim Audio",
     "RemoveSilence": "Remove Silence",
-    # "AudioDenoising": "Audio Denoising",
     "AudioRecorderAT": "MW Audio Recorder",
     "AddSubtitlesToVideo": "Add Subtitles To Video",
     "MultiLinePromptAT": "Multi-Line Prompt",
@@ -42,6 +50,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "MusicSeparation": "Music Separation",
     "SpeechSeparation": "Speech Separation",
     "MergeAudioMW": "Merge Audio",
+    "AudioAutoSplitProcessor": "Audio Auto Split Processor (音频自动分割)",
+    "AudioSegmentExtractor": "Audio Segment Extractor (音频片段提取)",
+    "AudioMergeSegments": "Audio Merge Segments (音频片段合并)",
+    "AudioBatchProcessor": "Audio Batch Processor (音频批处理)",
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
